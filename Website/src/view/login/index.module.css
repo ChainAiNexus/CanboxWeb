@@ -1,0 +1,125 @@
+.box {
+    width: 1400px;
+    margin: 0 auto;
+}
+.box_logo {
+    padding: 80px 0px;
+}
+.box_logo_1 {
+    width: 105px;
+    height: 74px;
+    display: block;
+}
+.box_h1 {
+    color: #fff;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+}
+.box_h2 {
+    color: #909090;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 10px 0px 70px 0px;
+}
+.box_continue {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid #fff;
+    padding: 12px;
+    color: #fff;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+}
+.box_continue:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: #747474 0px 0px 10px 2px;
+}
+.box_continue_img {
+    width: 48px;
+    height: 48px;
+    margin: 0 6px;
+}
+.box_h3 {
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+    color: #6f6f6f;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.box_h4 {
+    color: #6f6f6f;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    position: fixed;
+    bottom: 20px;
+    width: 1400px;
+}
+
+@media (max-width: 750px) {
+    .box {
+        width: 100%;
+        padding: 30px 20px;
+    }
+    .box_logo {
+        padding: 20px 0px;
+    }
+    .box_logo_1 {
+        width: 84px;
+        height: 64px;
+        display: block;
+    }
+    .box_h1 {
+        color: #fff;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+    }
+    .box_h2 {
+        color: #909090;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        margin: 10px 0px 40px 0px;
+    }
+    .box_continue {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        border-radius: 12px;
+        border: 1px solid #fff;
+        padding: 12px;
+        color: #fff;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+    }
+    .box_continue_img {
+        width: 25px;
+        height: 25px;
+        margin: 0 6px;
+    }
+    .box_h3 {
+        text-align: center;
+        padding: 20px 0px 0px 0px;
+        color: #6f6f6f;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .box_h4 {
+        font-size: 14px;
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+    }
+}

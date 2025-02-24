@@ -1,0 +1,103 @@
+{
+  "version": "0.1.0",
+  "name": "solana_lamport_transfer",
+  "instructions": [
+    {
+      "name": "transferLamports",
+      "accounts": [
+        {
+          "name": "from",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "to",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "donate",
+      "accounts": [
+        {
+          "name": "donorAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "donor",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "recipient1",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "recipient2",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Donor",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "donated",
+            "type": "bool"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "AlreadyDonated",
+      "msg": "This address has already donated."
+    },
+    {
+      "code": 6001,
+      "name": "InvalidRecipient",
+      "msg": "The recipient address is invalid."
+    },
+    {
+      "code": 6002,
+      "name": "InvalidPublicKey",
+      "msg": "Invalid PublicKey string"
+    }
+  ]
+}

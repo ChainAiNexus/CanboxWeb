@@ -1,0 +1,27 @@
+{ 
+   "editor.detectIndentation": false, 
+   "editor.tabSize": 2, // 
+   //  
+   "editor.formatOnSave": true,
+   //  
+   "eslint.format.enable": true,
+   //  
+   // 
+   "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "vue",
+      "html"
+   ],
+   //   
+   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+   "editor.suggestSelection": "first",
+   "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "i18n-ally.localesPaths": [
+    "src/lang"
+  ] //  
+}

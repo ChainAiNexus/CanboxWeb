@@ -1,0 +1,118 @@
+{
+    "name": "@solana/wallet-adapter-create-react-app-starter",
+    "version": "0.1.30",
+    "author": "Solana Maintainers <maintainers@solana.foundation>",
+    "repository": "https://github.com/anza-xyz/wallet-adapter",
+    "license": "Apache-2.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "public",
+        "src",
+        ".gitignore",
+        "config-overrides.js",
+        "LICENSE",
+        "package.json",
+        "README.md",
+        "tsconfig.json"
+    ],
+    "scripts": {
+        "build": "tsc --build --verbose && dotenv -e .env.production react-app-rewired build",
+        "clean": "shx mkdir -p build lib && shx rm -rf build lib",
+        "lint": "prettier --check 'src/{*,**/*}.{ts,tsx,js,jsx,json}' && eslint",
+        "start": "react-app-rewired start",
+        "test": "CI=true react-app-rewired test --passWithNoTests",
+        "test:watch": "react-app-rewired test --passWithNoTests",
+        "eject": "react-scripts eject"
+    },
+    "dependencies": {
+        "@coral-xyz/anchor": "^0.29.0",
+        "@emotion/react": "^11.13.3",
+        "@emotion/styled": "^11.13.0",
+        "@mui/icons-material": "^5.11.16",
+        "@mui/material": "^6.0.1",
+        "@project-serum/anchor": "^0.26.0",
+        "@solana/spl-token": "^0.2.0",
+        "@solana/wallet-adapter-ant-design": "^0.11.32",
+        "@solana/wallet-adapter-base": "workspace:^",
+        "@solana/wallet-adapter-material-ui": "^0.16.34",
+        "@solana/wallet-adapter-react": "workspace:^",
+        "@solana/wallet-adapter-react-ui": "workspace:^",
+        "@solana/wallet-adapter-wallets": "workspace:^",
+        "@solana/web3.js": "^1.77.3",
+        "@types/big.js": "^6.2.2",
+        "@types/bn.js": "^5.1.5",
+        "@types/crypto-js": "^4.2.2",
+        "@types/styled-components": "^5.1.34",
+        "antd": "^4.24.10",
+        "axios": "^0.26.0",
+        "bn.js": "^5.2.1",
+        "bs58": "^6.0.0",
+        "buffer": "^6.0.3",
+        "dotenv": "^16.0.3",
+        "dotenv-cli": "^7.2.1",
+        "echarts": "^5.5.1",
+        "echarts-for-react": "^3.0.2",
+        "i18next": "^23.15.0",
+        "notistack": "^3.0.1",
+        "react": "^17.0.2",
+        "react-app-rewired": "^2.2.1",
+        "react-dom": "^17.0.2",
+        "react-i18next": "^15.0.1",
+        "react-infinite-scroll-component": "^6.1.0",
+        "react-router-dom": "^6.2.1",
+        "react-scripts": "5.0.1",
+        "styled-components": "^6.1.13",
+        "swiper": "^11.1.14",
+        "vconsole": "^3.15.1",
+        "web-vitals": "^2.1.4"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^14.4.3",
+        "@types/chai": "^4.3.1",
+        "@types/jest": "^28.1.8",
+        "@types/mocha": "^9.1.1",
+        "@types/react": "^18.2.13",
+        "@types/react-dom": "^17.0.25",
+        "@types/testing-library__jest-dom": "^5.14.6",
+        "big.js": "^6.1.1",
+        "browserify-zlib": "^0.2.0",
+        "chai": "^4.3.6",
+        "crypto-browserify": "^3.12.0",
+        "https-browserify": "^1.0.0",
+        "mocha": "^10.0.0",
+        "process": "^0.11.10",
+        "react-redux": "^7.2.6",
+        "redux-saga": "^1.1.3",
+        "shx": "^0.3.4",
+        "source-map-loader": "^4.0.1",
+        "stream-browserify": "^3.0.0",
+        "stream-http": "^3.2.0",
+        "tailwindcss": "^3.4.3",
+        "ts-mocha": "^10.0.0",
+        "typescript": "~4.7.4",
+        "url": "^0.11.1",
+        "webpack": "^5.88.0"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

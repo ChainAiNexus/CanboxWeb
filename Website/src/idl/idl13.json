@@ -1,0 +1,150 @@
+{
+  "version": "0.1.0",
+  "name": "nft_program",
+  "instructions": [
+    {
+      "name": "mintToCollection",
+      "accounts": [
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "payer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "mint",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "metadataProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "masterEditionAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "nftMetadata",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "from",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "fromAta",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "toAta",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "splTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "idNft",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "transferNftAuthority",
+      "accounts": [
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "payer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "metadataProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "nftMetadata",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "idNft",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "InvalidRecipient",
+      "msg": "The recipient address is invalid."
+    },
+    {
+      "code": 6001,
+      "name": "InvalidAuthority",
+      "msg": "The nft authority is invalid."
+    }
+  ]
+}
