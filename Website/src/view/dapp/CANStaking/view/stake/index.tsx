@@ -83,13 +83,15 @@ function App() {
     }).catch(() => { });
   }
   useEffect(() => {
-    getTokenContractAddress()
-      .then((res: any) => {
-        getTokenBalance(res?.data);
-        handleList()
-        // getTokenBalance('BBCvV3NHBKhoVz828ie4KwZ1PYHk5yRXH9A4ukppSALn')
-      })
-      .catch(() => { });
+    if (publicKey && token) {
+      getTokenContractAddress()
+        .then((res: any) => {
+          getTokenBalance(res?.data);
+          handleList()
+          // getTokenBalance('BBCvV3NHBKhoVz828ie4KwZ1PYHk5yRXH9A4ukppSALn')
+        })
+        .catch(() => { });
+    }
   }, [publicKey, token]);
 
   return (
@@ -224,7 +226,11 @@ function App() {
           <div
             className="text-[#000] text-[16px] bg-[#fff] py-8 px-18 rounded-[20px] cursor-pointer"
             onClick={() => {
-              handleStake()
+              // handleStake()
+              notification.open({
+                key: 'Coming Soon',
+                message: 'Coming Soon',
+              });
             }}
           >
             Stake

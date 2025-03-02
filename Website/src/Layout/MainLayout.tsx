@@ -40,7 +40,12 @@ const MainLayout: React.FC = () => {
         if (res.code === 200) {
           localStorage.setItem('accessToken', res.data.accessToken);
           dispatch(createLoginSuccessAction(res.data.token, account as string));
-          navigate('/');
+
+          const currentUrl = window.location.href;
+          if (currentUrl.includes("login")) {
+            navigate('/');
+          }
+
         }
       })
       .catch((err: any) => {
