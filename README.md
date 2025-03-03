@@ -1,4 +1,4 @@
-Canbox Web
+name: Canbox Web
 
 support: google chrome
 
