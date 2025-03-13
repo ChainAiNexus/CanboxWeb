@@ -1,8 +1,8 @@
-name: Canbox Web
+name: "Canbox Web"
 
-support: google chrome
+support: "google chrome"
 
-Website: https://github.com/ChainAiNexus/CanboxWeb/tree/main/Website 
+Website: "https://github.com/ChainAiNexus/CanboxWeb/tree/main/Website" 
 
-ExtensionPlugin: https://github.com/ChainAiNexus/CanboxWeb/tree/main/ExtensionPlugin
+ExtensionPlugin: "https://github.com/ChainAiNexus/CanboxWeb/tree/main/ExtensionPlugin"
 
